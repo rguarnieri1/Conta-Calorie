@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\051\\Documents\\Studio\\Conta-calorie\\Conta calorie\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{65835871-F3B8-F125-DB50-781B20C474CB}|Conta calorie\\Conta calorie.Client\\Conta calorie.Client.csproj|c:\\users\\051\\documents\\studio\\conta-calorie\\conta calorie\\conta calorie\\conta calorie.client\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65835871-F3B8-F125-DB50-781B20C474CB}|Conta calorie\\Conta calorie.Client\\Conta calorie.Client.csproj|solutionrelative:conta calorie\\conta calorie.client\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65835871-F3B8-F125-DB50-781B20C474CB}|Conta calorie\\Conta calorie.Client\\Conta calorie.Client.csproj|c:\\users\\051\\documents\\studio\\conta-calorie\\conta calorie\\conta calorie\\conta calorie.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65835871-F3B8-F125-DB50-781B20C474CB}|Conta calorie\\Conta calorie.Client\\Conta calorie.Client.csproj|solutionrelative:conta calorie\\conta calorie.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E0A30453-4727-34CA-C7A7-33B2C5A16E70}|Conta calorie\\Conta calorie\\Conta calorie.csproj|c:\\users\\051\\documents\\studio\\conta-calorie\\conta calorie\\conta calorie\\conta calorie\\conta calorie.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{E0A30453-4727-34CA-C7A7-33B2C5A16E70}|Conta calorie\\Conta calorie\\Conta calorie.csproj|solutionrelative:conta calorie\\conta calorie\\conta calorie.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -59,6 +67,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "C:\\Users\\051\\Documents\\Studio\\Conta-calorie\\Conta calorie\\Conta calorie\\Conta calorie.Client\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "Conta calorie\\Conta calorie.Client\\Pages\\Counter.razor",
+              "ToolTip": "C:\\Users\\051\\Documents\\Studio\\Conta-calorie\\Conta calorie\\Conta calorie\\Conta calorie.Client\\Pages\\Counter.razor",
+              "RelativeToolTip": "Conta calorie\\Conta calorie.Client\\Pages\\Counter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-08T12:54:53.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\051\\Documents\\Studio\\Conta-calorie\\Conta calorie\\Conta calorie\\Conta calorie.Client\\Program.cs",
+              "RelativeDocumentMoniker": "Conta calorie\\Conta calorie.Client\\Program.cs",
+              "ToolTip": "C:\\Users\\051\\Documents\\Studio\\Conta-calorie\\Conta calorie\\Conta calorie\\Conta calorie.Client\\Program.cs",
+              "RelativeToolTip": "Conta calorie\\Conta calorie.Client\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T12:54:42.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Conta calorie.csproj",
               "DocumentMoniker": "C:\\Users\\051\\Documents\\Studio\\Conta-calorie\\Conta calorie\\Conta calorie\\Conta calorie\\Conta calorie.csproj",
               "RelativeDocumentMoniker": "Conta calorie\\Conta calorie\\Conta calorie.csproj",
@@ -71,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\051\\Documents\\Studio\\Conta-calorie\\Conta calorie\\Conta calorie\\Conta calorie\\Program.cs",
               "RelativeDocumentMoniker": "Conta calorie\\Conta calorie\\Program.cs",
@@ -79,7 +113,8 @@
               "RelativeToolTip": "Conta calorie\\Conta calorie\\Program.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T16:04:30.493Z"
+              "WhenOpened": "2026-04-11T16:04:30.493Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -87,10 +122,6 @@
           "DockedHeight": 91,
           "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
