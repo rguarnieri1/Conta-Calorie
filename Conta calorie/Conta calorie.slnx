@@ -2,4 +2,5 @@
   <Project Path="BL/BL.csproj" Id="56eab5f9-0c69-4a83-8188-71bda3becafe" />
   <Project Path="Conta calorie/Conta calorie.Client/Conta calorie.Client.csproj" />
   <Project Path="Conta calorie/Conta calorie/Conta calorie.csproj" />
+  <Project Path="DAL/DAL.csproj" Id="f218efca-7dd0-445c-9f06-0515656e275c" />
 </Solution>
