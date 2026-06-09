@@ -1,2 +1,7 @@
 C:\Users\051\Documents\Studio\Conta-calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\051\Documents\Studio\Conta-calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\staticwebassets.build.json

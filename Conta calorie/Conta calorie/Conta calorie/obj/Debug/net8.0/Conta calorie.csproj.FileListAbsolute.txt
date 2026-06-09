@@ -66,3 +66,71 @@ C:\Users\051\Documents\Studio\Conta-calorie\Conta calorie\Conta calorie\Conta ca
 C:\Users\051\Documents\Studio\Conta-calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta_calorie.pdb
 C:\Users\051\Documents\Studio\Conta-calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta calorie.genruntimeconfig.cache
 C:\Users\051\Documents\Studio\Conta-calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\ref\Conta_calorie.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\appsettings.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugHost.runtimeconfig.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\BlazorDebugProxy\BrowserDebugProxy.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.FileFormats.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.NET.WebAssembly.Webcil.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\BlazorDebugProxy\Microsoft.SymbolStore.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\BlazorDebugProxy\Newtonsoft.Json.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Conta_calorie.Client.staticwebassets.runtime.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Conta_calorie.Client.staticwebassets.endpoints.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Conta_calorie.staticwebassets.runtime.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Conta_calorie.staticwebassets.endpoints.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Conta_calorie.exe
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Conta_calorie.deps.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Conta_calorie.runtimeconfig.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Conta_calorie.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Conta_calorie.pdb
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.JSInterop.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Conta_calorie.Client.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Conta_calorie.Client.pdb
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta calorie.csproj.AssemblyReference.cache
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta calorie.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta calorie.AssemblyInfoInputs.cache
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta calorie.AssemblyInfo.cs
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta calorie.csproj.CoreCompileInputs.cache
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta_calorie.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta calorie.sourcelink.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\scopedcss\bundle\Conta_calorie.styles.css
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\scopedcss\projectbundle\Conta_calorie.bundle.scp.css
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta ca.6123590F.Up2Date
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta_calorie.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\refint\Conta_calorie.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta_calorie.pdb
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta calorie.genruntimeconfig.cache
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\ref\Conta_calorie.dll
