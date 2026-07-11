@@ -142,6 +142,28 @@
           }
         }
       },
+      "Microsoft.Extensions.Localization/8.0.6": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Localization.Abstractions": "8.0.6",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.3",
+          "Microsoft.Extensions.Options": "8.0.2"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Localization.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.624.26909"
+          }
+        }
+      },
+      "Microsoft.Extensions.Localization.Abstractions/8.0.6": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Localization.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.624.26909"
+          }
+        }
+      },
       "Microsoft.Extensions.Logging/8.0.1": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "8.0.1",
@@ -196,9 +218,23 @@
           }
         }
       },
+      "MudBlazor/7.5.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "8.0.25",
+          "Microsoft.AspNetCore.Components.Web": "8.0.25",
+          "Microsoft.Extensions.Localization": "8.0.6"
+        },
+        "runtime": {
+          "lib/net8.0/MudBlazor.dll": {
+            "assemblyVersion": "7.5.0.0",
+            "fileVersion": "7.5.0.0"
+          }
+        }
+      },
       "Conta_calorie.Client/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components.WebAssembly": "8.0.25"
+          "Microsoft.AspNetCore.Components.WebAssembly": "8.0.25",
+          "MudBlazor": "7.5.0"
         },
         "runtime": {
           "Conta_calorie.Client.dll": {
@@ -306,6 +342,20 @@
       "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.2",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
     },
+    "Microsoft.Extensions.Localization/8.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EXcSpQE6E80Qutej0ZShz1oRWBFocDzir/R3Gd1jAqZ5SnPpSr1Ep/tH5ha0cRXY22cWVuOb7I9rM32Ew+ju7g==",
+      "path": "microsoft.extensions.localization/8.0.6",
+      "hashPath": "microsoft.extensions.localization.8.0.6.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Localization.Abstractions/8.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oQdKQ4xlb+Qa4t1gWGj58cocLdWZynP+wLExIAxozh2SrvffEzTvTGI2IbRx4mBNgg9jbbyoPE8nNOwJ1Thddg==",
+      "path": "microsoft.extensions.localization.abstractions/8.0.6",
+      "hashPath": "microsoft.extensions.localization.abstractions.8.0.6.nupkg.sha512"
+    },
     "Microsoft.Extensions.Logging/8.0.1": {
       "type": "package",
       "serviceable": true,
@@ -340,6 +390,13 @@
       "sha512": "sha512-zMiBzB01hue8sjTlwhRurmLYpq6Cp8jzaygi0Ouw/jBCqdy77CtUumLMw+3F+7KBGN2kSheeMU/uHEpKV4br5Q==",
       "path": "microsoft.jsinterop.webassembly/8.0.25",
       "hashPath": "microsoft.jsinterop.webassembly.8.0.25.nupkg.sha512"
+    },
+    "MudBlazor/7.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yW1+6b9bG0OjMa7FSUnYZ2D9v09cTru8Hri1cVekRzdQpA/rieSgbfrWY9KQOzMW+1LbOySTEEipun6GCarQNg==",
+      "path": "mudblazor/7.5.0",
+      "hashPath": "mudblazor.7.5.0.nupkg.sha512"
     },
     "Conta_calorie.Client/1.0.0": {
       "type": "project",

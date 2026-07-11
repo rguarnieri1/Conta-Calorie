@@ -13,6 +13,9 @@
     <SourceRoot Include="C:\Users\Pc\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)mudblazor\7.5.0\buildTransitive\MudBlazor.props" Condition="Exists('$(NuGetPackageRoot)mudblazor\7.5.0\buildTransitive\MudBlazor.props')" />
+  </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_AspNetCore_Components_WebAssembly_Server Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_Server)' == '' ">C:\Users\Pc\.nuget\packages\microsoft.aspnetcore.components.webassembly.server\8.0.25</PkgMicrosoft_AspNetCore_Components_WebAssembly_Server>
   </PropertyGroup>

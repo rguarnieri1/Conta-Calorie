@@ -134,3 +134,6 @@ C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\C
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta_calorie.pdb
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta calorie.genruntimeconfig.cache
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\ref\Conta_calorie.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.Extensions.Localization.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\bin\Debug\net8.0\MudBlazor.dll
