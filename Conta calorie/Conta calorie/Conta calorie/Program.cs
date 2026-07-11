@@ -1,11 +1,13 @@
 using Conta_calorie.Client.Pages;
 using Conta_calorie.Components;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
+builder.Services.AddMudServices();
 
 var app = builder.Build();
 
@@ -25,6 +27,8 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
+
+
 
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
