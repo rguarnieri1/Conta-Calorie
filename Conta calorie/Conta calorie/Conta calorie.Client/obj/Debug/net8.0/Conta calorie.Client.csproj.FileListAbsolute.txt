@@ -1889,7 +1889,6 @@ C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\C
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\Conta ca.13ECD767.Up2Date
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\Conta_calorie.Client.dll
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\refint\Conta_calorie.Client.dll
@@ -2084,6 +2083,7 @@ C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\C
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\compressed\gopmk0cxkd-{0}-tw2nx7l6ou-tw2nx7l6ou.gz
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\compressed\79eslvuwg6-{0}-8t8p0jjk45-8t8p0jjk45.gz
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\compressed\smzrmkqu90-{0}-remlhfzyxr-remlhfzyxr.gz
-C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\compressed\51fnbxk14z-{0}-8lmaudcplw-8lmaudcplw.gz
-C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\compressed\h4jp2gqmjk-{0}-r4a8g2f7c1-r4a8g2f7c1.gz
-C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\compressed\qrmnyr7qri-{0}-8ng1tj1777-8ng1tj1777.gz
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\compressed\51fnbxk14z-{0}-0ozf360rbg-0ozf360rbg.gz
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\compressed\h4jp2gqmjk-{0}-xuo74jt1vt-xuo74jt1vt.gz
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\compressed\qrmnyr7qri-{0}-aknz96gxnt-aknz96gxnt.gz
+C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie.Client\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

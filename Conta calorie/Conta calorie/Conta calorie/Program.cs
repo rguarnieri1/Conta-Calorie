@@ -1,4 +1,3 @@
-using Conta_calorie.Client.Pages;
 using Conta_calorie.Components;
 using MudBlazor.Services;
 
