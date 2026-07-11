@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Conta_calorie.Client",
   "resources": {
-    "hash": "sha256-C06GT4d3kFYs6Jt3rQU1GZyIHSWkLQw9vOPe//QGmcc=",
+    "hash": "sha256-HEw46EQ4zLhUBo77Nzyt9WksAdRrKbWooG25/vw9iZE=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-YDHEHpc+/PUWFYa9BMCN3EcVlpemjKD024swcpPfMIQ="
     },
@@ -212,10 +212,10 @@
       "mscorlib.wasm": "sha256-K9Dyt2y2qc5iOiFtzVJ54OrivbmVXDxkD16w+GkNz6Y=",
       "netstandard.wasm": "sha256-cdbfmZR3ZtA/HeSPpbwrUoRjB1vl4OgPSKGeGSmtiug=",
       "System.Private.CoreLib.wasm": "sha256-naY/8zY/5LD24ypcNRlECeSByBMi44aNk+g16oi63Mc=",
-      "Conta_calorie.Client.wasm": "sha256-lVjMLRDQxLqXNZ1BtsutzyIgdZL6ZWh0FKjElkNimig="
+      "Conta_calorie.Client.wasm": "sha256-ajnzWDmB1+MBTwr9Z5zHxsc7Niim4/8Qm1WOBAYOVRs="
     },
     "pdb": {
-      "Conta_calorie.Client.pdb": "sha256-gnPQ7iG6tkAeQ9RT7mFsaVARa409EnUKPb2LXStZ0wo="
+      "Conta_calorie.Client.pdb": "sha256-gxB9Sd/3Ha0iBp0iPF5rguutk6N76krBQb3gRZ8QjcU="
     }
   },
   "cacheBootResources": true,

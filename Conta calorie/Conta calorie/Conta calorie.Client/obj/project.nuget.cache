@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mMeypyQqGJg=",
+  "dgSpecHash": "Tr9ITNnRsPc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Pc\\source\\repos\\rguarnieri1\\Conta-Calorie\\Conta calorie\\Conta calorie\\Conta calorie.Client\\Conta calorie.Client.csproj",
   "expectedPackageFiles": [
@@ -33,9 +33,6 @@
     "C:\\Users\\Pc\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\10.0.9\\microsoft.net.sdk.webassembly.pack.10.0.9.nupkg.sha512",
     "C:\\Users\\Pc\\.nuget\\packages\\mudblazor\\7.5.0\\mudblazor.7.5.0.nupkg.sha512",
     "C:\\Users\\Pc\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
-    "C:\\Users\\Pc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.28\\microsoft.windowsdesktop.app.ref.8.0.28.nupkg.sha512",
-    "C:\\Users\\Pc\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.28\\microsoft.netcore.app.ref.8.0.28.nupkg.sha512",
-    "C:\\Users\\Pc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.28\\microsoft.aspnetcore.app.ref.8.0.28.nupkg.sha512",
     "C:\\Users\\Pc\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.28\\microsoft.netcore.app.runtime.mono.browser-wasm.8.0.28.nupkg.sha512"
   ],
   "logs": []

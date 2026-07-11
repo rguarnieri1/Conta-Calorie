@@ -127,7 +127,6 @@ C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\C
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta ca.6123590F.Up2Date
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\Conta_calorie.dll
 C:\Users\Pc\source\repos\rguarnieri1\Conta-Calorie\Conta calorie\Conta calorie\Conta calorie\obj\Debug\net8.0\refint\Conta_calorie.dll

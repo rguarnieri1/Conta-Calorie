@@ -86,19 +86,7 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.28, 8.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.28, 8.0.28]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.28, 8.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[8.0.28, 8.0.28]"
             }
           ],
