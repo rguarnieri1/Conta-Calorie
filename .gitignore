@@ -3,3 +3,8 @@
 ################################################################################
 
 *.vsidx
+bin/
+obj/
+/.vs/Conta calorie.slnx/v18/DocumentLayout.json
+/Conta calorie/BL/obj/Debug/net8.0/BL.AssemblyInfo.cs
+/Conta calorie/BL/obj/Debug/net8.0/BL.AssemblyInfoInputs.cache
