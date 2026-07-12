@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Conta_calorie.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f36f58363f6237d886dc83837e14a67a57c64c9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cf801a7a768a751cecd76b02b3fbca822bebb74")]
 [assembly: System.Reflection.AssemblyProductAttribute("Conta_calorie.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Conta_calorie.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
