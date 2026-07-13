@@ -1,0 +1,21 @@
+﻿@page "/"
+
+@using MudBlazor
+
+<PageTitle>Home</PageTitle>
+
+<MudLayout>
+    <MudDrawer Open="true" Anchor="Anchor.Start" Variant="DrawerVariant.Mini" Style="background-color:#f5f5f5">
+            <MudNavMenu>
+                <MudNavLink Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
+                <!-- Counter menu removed -->
+            </MudNavMenu>
+        </MudDrawer>
+
+        <MudMainContent>
+            <MudContainer Class="mt-4">
+                <MudText Typo="Typo.h4">Benvenuto</MudText>
+                <p>Questa è la home page dell'app.</p>
+            </MudContainer>
+        </MudMainContent>
+    </MudLayout>

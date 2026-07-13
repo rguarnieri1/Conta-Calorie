@@ -6,14 +6,14 @@
 
 @* Layout con menu a sinistra e area centrale vuota. Le palette proposte sono qui sotto; premi "Applica" per cambiarle *@
 <MudLayout>
-    <MudDrawer Open="true" Anchor="Anchor.Start" Variant="DrawerVariant.Mini" Elevation="1" Style="@($"background-color:{DrawerColor}; color:{TextColor}; min-width:200px;")">
+    <MudDrawer Open="true" Anchor="Anchor.Start" Variant="DrawerVariant.Mini" Elevation="1" Style="background-color:@DrawerColor; color:@TextColor; min-width:200px;">
         <MudNavMenu>
             <MudNavLink Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
             <!-- Voci di menu aggiuntive -->
         </MudNavMenu>
     </MudDrawer>
 
-    <MudMainContent Style="@($"background-color:{ContentColor}; min-height:75vh; color:{TextColor};")">
+    <MudMainContent Style="background-color:@ContentColor; min-height:75vh; color:@TextColor;">
         <MudContainer Class="d-flex justify-center align-center" Style="height:60vh;">
             @* Spazio centrale vuoto, puoi inserire i tuoi componenti qui *@
             <div style="width:70%; height:80%; border:2px dashed rgba(0,0,0,0.12); display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.02);">

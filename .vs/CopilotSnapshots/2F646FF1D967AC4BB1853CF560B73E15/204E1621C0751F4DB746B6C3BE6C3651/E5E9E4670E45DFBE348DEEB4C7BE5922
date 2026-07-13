@@ -1,0 +1,35 @@
+﻿@page "/"
+
+@using MudBlazor
+
+<PageTitle>Home</PageTitle>
+
+@* Applico un tema locale per questa pagina per impostare DrawerBackground *@
+<MudThemeProvider Theme="@_pageTheme">
+    <MudLayout>
+        <MudDrawer Open="true" Anchor="Anchor.Start" Variant="DrawerVariant.Mini">
+            <MudNavMenu>
+                <MudNavLink Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
+                <!-- Counter menu removed -->
+            </MudNavMenu>
+        </MudDrawer>
+
+        <MudMainContent>
+            <MudContainer Class="mt-4">
+                <MudText Typo="Typo.h4">Benvenuto</MudText>
+                <p>Questa è la home page dell'app.</p>
+            </MudContainer>
+        </MudMainContent>
+    </MudLayout>
+</MudThemeProvider>
+
+@code {
+    // Tema locale: modifica DrawerBackground qui
+    private MudTheme _pageTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            DrawerBackground = Colors.Grey.Lighten4 // Cambia il valore se desideri un altro colore (hex o Colors.*)
+        }
+    };
+}
