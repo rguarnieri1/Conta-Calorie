@@ -26,8 +26,24 @@
 </MudLayout>
 
 @code {
-    // Colori applicati al layout (modifica direttamente se necessario)
+    // Palette semplici come esempio. I colori sono espressi in hex per compatibilità con la versione MudBlazor in uso.
+    private record PaletteOption(string Name, string Drawer, string Content, string Text);
+
+    private List<PaletteOption> Palettes = new()
+    {
+        new("Chiaro", "#F5F5F5", "#FFFFFF", "#000000"),
+        new("Scuro", "#263238", "#37474F", "#FFFFFF"),
+        new("Primario", "#1565C0", "#E3F2FD", "#0D47A1")
+    };
+
     private string DrawerColor = "#F5F5F5";
     private string ContentColor = "#FFFFFF";
     private string TextColor = "#000000";
+
+    private void ApplyPalette(PaletteOption p)
+    {
+        DrawerColor = p.Drawer;
+        ContentColor = p.Content;
+        TextColor = p.Text;
+    }
 }
