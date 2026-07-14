@@ -15,10 +15,9 @@
 
     <MudMainContent Style="@($"background-color:{ContentColor}; min-height:75vh; color:{TextColor};")">
         <MudContainer Class="d-flex justify-center align-center" Style="height:60vh;">
-            @* Area centrale con messaggio introduttivo *@
-            <div style="width:70%; height:80%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
-                <MudText Typo="Typo.h4" Class="mb-2">La salute inizia da ciò che mangi.</MudText>
-                <MudText Typo="Typo.body1">Vuoi mangiare in maniera più consapevole? Monitora i pasti, impara le giuste abitudini e raggiungi i tuoi obiettivi con MyFitnessPal.</MudText>
+            @* Spazio centrale vuoto, puoi inserire i tuoi componenti qui *@
+            <div style="width:70%; height:80%; border:2px dashed rgba(0,0,0,0.12); display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.02);">
+                <MudText Typo="Typo.h6">Area centrale (vuota)</MudText>
             </div>
         </MudContainer>
 
