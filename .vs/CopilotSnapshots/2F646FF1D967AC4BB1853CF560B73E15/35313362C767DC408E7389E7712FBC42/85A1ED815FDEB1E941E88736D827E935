@@ -1,8 +1,6 @@
-using Conta_calorie.Client.Pages;
+﻿using Conta_calorie.Client.Pages;
 using Conta_calorie.Components;
 using MudBlazor.Services;
-using System.Text.Json;
-using System.Net.Http.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,9 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
 builder.Services.AddMudServices();
-
-// HttpClient factory per chiamate verso provider OAuth
-builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
@@ -32,7 +27,10 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
-// HttpClient factory per chiamate verso provider OAuth (registrata prima di Build)
+
+// HttpClient factory per chiamate verso provider OAuth
+builder.Services.AddHttpClient();
+
 
 
 app.MapRazorComponents<App>()

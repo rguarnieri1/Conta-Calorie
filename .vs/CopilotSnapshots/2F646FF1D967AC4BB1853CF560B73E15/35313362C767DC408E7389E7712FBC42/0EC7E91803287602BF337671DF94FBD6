@@ -1,4 +1,4 @@
-@page "/login"
+﻿@page "/login"
 
 @using MudBlazor
 
@@ -62,7 +62,7 @@
         var fbClientId = Configuration["OAuth:FacebookClientId"] ?? string.Empty;
         var redirect = Configuration["OAuth:RedirectUri"] ?? NavManager.Uri;
         // Costruisce URL autorizzazione Facebook (server dovrà scambiare il code)
-        var url = $"https://www.facebook.com/v15.0/dialog/oauth?client_id={Uri.EscapeDataString(fbClientId)}&redirect_uri={Uri.EscapeDataString(redirect)}&response_type=code&scope=email,public_profile&state=provider:facebook";
+        var url = $"https://www.facebook.com/v15.0/dialog/oauth?client_id={Uri.EscapeDataString(fbClientId)}&redirect_uri={Uri.EscapeDataString(redirect)}&response_type=code&scope=email,public_profile";
         NavManager.NavigateTo(url, true);
     }
 
@@ -71,7 +71,7 @@
         var googleClientId = Configuration["OAuth:GoogleClientId"] ?? string.Empty;
         var redirect = Configuration["OAuth:RedirectUri"] ?? NavManager.Uri;
         // Costruisce URL autorizzazione Google (Authorization Code flow)
-        var url = $"https://accounts.google.com/o/oauth2/v2/auth?client_id={Uri.EscapeDataString(googleClientId)}&redirect_uri={Uri.EscapeDataString(redirect)}&response_type=code&scope=openid%20email%20profile&access_type=online&prompt=consent&state=provider:google";
+        var url = $"https://accounts.google.com/o/oauth2/v2/auth?client_id={Uri.EscapeDataString(googleClientId)}&redirect_uri={Uri.EscapeDataString(redirect)}&response_type=code&scope=openid%20email%20profile&access_type=online&prompt=consent";
         NavManager.NavigateTo(url, true);
     }
 }
