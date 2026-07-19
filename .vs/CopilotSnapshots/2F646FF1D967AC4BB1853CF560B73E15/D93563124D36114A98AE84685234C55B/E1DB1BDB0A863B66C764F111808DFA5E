@@ -1,0 +1,34 @@
+﻿@page "/"
+
+@using MudBlazor
+
+<PageTitle>Home</PageTitle>
+
+@* Layout con menu a sinistra e area centrale vuota. Le palette proposte sono qui sotto; premi "Applica" per cambiarle *@
+<MudLayout>
+    <MudDrawer Open="true" Anchor="Anchor.Start" Variant="DrawerVariant.Mini" Elevation="1" Style="@($"background-color:{DrawerColor}; color:{TextColor}; min-width:200px;")">
+        <MudNavMenu>
+            <MudNavLink Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
+            <!-- Voci di menu aggiuntive -->
+        </MudNavMenu>
+    </MudDrawer>
+
+    <MudMainContent Style="@($"background-color:{ContentColor}; min-height:75vh; color:{TextColor};")">
+        <MudContainer Class="d-flex justify-center align-center" Style="height:60vh;">
+            @* Area centrale con messaggio introduttivo *@
+            <div style="width:70%; height:80%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+                <MudText Typo="Typo.h4" Class="mb-2">La salute inizia da ciò che mangi.</MudText>
+                <MudText Typo="Typo.body1">Vuoi mangiare in maniera più consapevole? Monitora i pasti, impara le giuste abitudini e raggiungi i tuoi obiettivi con Conta calorie.</MudText>
+            </div>
+        </MudContainer>
+
+        @* Area 'Palette suggerite' rimossa come richiesto *@
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    // Colori applicati al layout (modifica direttamente se necessario)
+    private string DrawerColor = "#F5F5F5";
+    private string ContentColor = "#FFFFFF";
+    private string TextColor = "#000000";
+}

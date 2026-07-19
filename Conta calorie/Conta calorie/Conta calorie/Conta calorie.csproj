@@ -13,4 +13,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.25" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\images\img_centro_homepage.jpg" />
+  </ItemGroup>
+
 </Project>
