@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a24ae6043d89e4a5c12664c7b871d82bc087d6fc")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7c845b1b52c9299c7162f679586a22cbdae5aed")]
->>>>>>> qa
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ee7025d1ea4510a1604e6c11f3f82fa98c48822")]
 [assembly: System.Reflection.AssemblyProductAttribute("DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
