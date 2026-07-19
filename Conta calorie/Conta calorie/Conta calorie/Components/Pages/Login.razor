@@ -1,0 +1,66 @@
+@page "/login"
+
+@using MudBlazor
+
+<PageTitle>Login</PageTitle>
+
+<MudContainer Class="mt-6">
+    <MudGrid>
+        <MudItem xs="12" md="6">
+            <MudPaper Elevation="0" Class="pa-6">
+                <MudText Typo="Typo.h5">Benvenuto</MudText>
+                <MudText Typo="Typo.body2">Accedi per gestire i tuoi pasti, monitorare i progressi e migliorare le abitudini alimentari.</MudText>
+            </MudPaper>
+        </MudItem>
+
+        <MudItem xs="12" md="6">
+            <MudPaper Elevation="1" Class="pa-6">
+                <MudForm @ref="_form" OnValidSubmit="OnValidSubmit">
+                    <MudTextField @bind-Value="Email" Label="Email" Required="true" For="@(()=>Email)" />
+                    <MudTextField @bind-Value="Password" Label="Password" InputType="InputType.Password" Required="true" For="@(()=>Password)" />
+
+                    <div style="display:flex; justify-content:flex-start; gap:12px; margin-top:16px;">
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Submit">Accedi</MudButton>
+                    </div>
+
+                    <MudDivider Class="my-4" />
+
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        <MudButton Variant="Variant.Outlined" Color="Color.Primary" OnClick="LoginWithFacebook">Accedi con Facebook</MudButton>
+                        <MudButton Variant="Variant.Outlined" Color="Color.Secondary" OnClick="LoginWithGoogle">Accedi con Google</MudButton>
+                    </div>
+                </MudForm>
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+@code {
+    private MudForm _form;
+    private string Email { get; set; } = string.Empty;
+    private string Password { get; set; } = string.Empty;
+
+    private async Task Submit()
+    {
+        if (_form is not null)
+        {
+            await _form.Validate();
+            if (_form.IsValid)
+            {
+                // TODO: eseguire autenticazione (API, servizio, ecc.)
+            }
+        }
+    }
+
+    private Task OnValidSubmit() => Submit();
+
+    private void LoginWithFacebook()
+    {
+        // TODO: avviare flusso OAuth per Facebook
+    }
+
+    private void LoginWithGoogle()
+    {
+        // TODO: avviare flusso OAuth per Google
+    }
+}
