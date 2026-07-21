@@ -1,4 +1,4 @@
-using Conta_calorie.Client.Pages;
+﻿using Conta_calorie.Client.Pages;
 using Conta_calorie.Components;
 using MudBlazor.Services;
 using System.Text.Json;
@@ -253,8 +253,7 @@ app.MapGet("/auth-callback", async (HttpContext http, IConfiguration config, IHt
                 name = userResp.TryGetProperty("name", out var n) ? n.GetString() : string.Empty;
             }
 
-            var dest = $"{redirectToClient}?provider=google&email={Uri.EscapeDataString(email)}" +
-                       $"&name={Uri.EscapeDataString(name)}";
+            var dest = $"{redirectToClient}?provider=google&email={Uri.EscapeDataString(email)}&name={Uri.EscapeDataString(name)}";
             http.Response.Redirect(dest);
             return;
         }

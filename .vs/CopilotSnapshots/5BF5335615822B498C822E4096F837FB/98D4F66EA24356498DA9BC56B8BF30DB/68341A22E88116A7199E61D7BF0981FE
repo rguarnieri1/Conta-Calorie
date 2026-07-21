@@ -1,4 +1,4 @@
-using Conta_calorie.Client.Pages;
+﻿using Conta_calorie.Client.Pages;
 using Conta_calorie.Components;
 using MudBlazor.Services;
 using System.Text.Json;
@@ -84,11 +84,11 @@ app.MapGet("/auth-start", (HttpContext http, IConfiguration config) =>
 {
     var provider = http.Request.Query["provider"].ToString();
     var oauthCfg = config.GetSection("OAuth");
-    var redirectToClientStart = oauthCfg["ClientRedirect"] ?? "https://localhost:5000/";
+    var redirectToClient = oauthCfg["ClientRedirect"] ?? "https://localhost:5000/";
 
-        if (string.IsNullOrEmpty(provider))
+    if (string.IsNullOrEmpty(provider))
     {
-        http.Response.Redirect(redirectToClientStart + "?auth=error");
+        http.Response.Redirect(redirectToClient + "?auth=error");
         return Results.BadRequest();
     }
 
@@ -111,8 +111,8 @@ app.MapGet("/auth-start", (HttpContext http, IConfiguration config) =>
         var authEndpoint = "https://accounts.google.com/o/oauth2/v2/auth";
         var parameters = new Dictionary<string, string?>
         {
-            ["client_id"] = oauthCfg["GoogleClientId"],
-            ["redirect_uri"] = oauthCfg["RedirectUri"],
+            ["client_id"] = oauthSection["GoogleClientId"],
+            ["redirect_uri"] = oauthSection["RedirectUri"],
             ["response_type"] = "code",
             ["scope"] = "openid email profile",
             ["state"] = state,
@@ -129,8 +129,8 @@ app.MapGet("/auth-start", (HttpContext http, IConfiguration config) =>
         var authEndpoint = "https://www.facebook.com/v15.0/dialog/oauth";
         var parameters = new Dictionary<string, string?>
         {
-            ["client_id"] = oauthCfg["FacebookClientId"],
-            ["redirect_uri"] = oauthCfg["RedirectUri"],
+            ["client_id"] = oauthSection["FacebookClientId"],
+            ["redirect_uri"] = oauthSection["RedirectUri"],
             ["state"] = state,
             ["scope"] = "email"
         };
@@ -141,7 +141,7 @@ app.MapGet("/auth-start", (HttpContext http, IConfiguration config) =>
     }
     else
     {
-        http.Response.Redirect(redirectToClientStart + "?auth=unknown_provider");
+        http.Response.Redirect(redirectToClient + "?auth=unknown_provider");
         return Results.BadRequest();
     }
 });
@@ -157,8 +157,8 @@ app.MapGet("/auth-callback", async (HttpContext http, IConfiguration config, IHt
     var cookieState = http.Request.Cookies["oauth_state"];
     if (string.IsNullOrEmpty(state) || string.IsNullOrEmpty(cookieState) || cookieState != state)
     {
-        var redirectToClientInvalidLocal = config.GetSection("OAuth")["ClientRedirect"] ?? "https://localhost:5000/";
-        http.Response.Redirect(redirectToClientInvalidLocal + "?auth=invalid_state");
+        var redirectToClient = config.GetSection("OAuth")["ClientRedirect"] ?? "https://localhost:5000/";
+        http.Response.Redirect(redirectToClient + "?auth=invalid_state");
         return;
     }
 
@@ -253,8 +253,7 @@ app.MapGet("/auth-callback", async (HttpContext http, IConfiguration config, IHt
                 name = userResp.TryGetProperty("name", out var n) ? n.GetString() : string.Empty;
             }
 
-            var dest = $"{redirectToClient}?provider=google&email={Uri.EscapeDataString(email)}" +
-                       $"&name={Uri.EscapeDataString(name)}";
+            var dest = $"{redirectToClient}?provider=google&email={Uri.EscapeDataString(email)}&name={Uri.EscapeDataString(name)}";
             http.Response.Redirect(dest);
             return;
         }

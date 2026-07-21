@@ -1,9 +1,7 @@
 ﻿@page "/"
 
 @using MudBlazor
-@using System.Text.Json
 @inject NavigationManager NavManager
-@inject IJSRuntime JS
 
 <PageTitle>Home</PageTitle>
 
@@ -28,9 +26,6 @@
             <div style="width:70%; height:80%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
                 <MudText Typo="Typo.h4" Class="mb-2">La salute inizia da ciò che mangi.</MudText>
                 <MudText Typo="Typo.body1">Vuoi mangiare in maniera più consapevole? Monitora i pasti, impara le giuste abitudini e raggiungi i tuoi obiettivi con MyFitnessPal.</MudText>
-                <div class="mt-4">
-                    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="@NavigateToLogin">Accedi</MudButton>
-                </div>
             </div>
         </MudContainer>
 
@@ -43,7 +38,7 @@
     private Severity alertSeverity = Severity.Info;
     private string alertMessage = string.Empty;
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
         // Parse query string for auth result or provider data
         var uri = new Uri(NavManager.Uri);
@@ -79,14 +74,6 @@
                 showAlert = true;
                 alertSeverity = Severity.Success;
                 alertMessage = $"Autenticazione riuscita con {provider}. Benvenuto {name} ({email}).";
-
-                // Salva stato autenticazione sul client (localStorage)
-                try
-                {
-                    var userObj = new { provider = provider, name = name, email = email };
-                    await JS.InvokeVoidAsync("localStorage.setItem", "auth_user", JsonSerializer.Serialize(userObj));
-                }
-                catch { /* ignore JS errors */ }
             }
 
             // Rimuovi query string (replace history entry)
@@ -98,6 +85,4 @@
     private string DrawerColor = "#F5F5F5";
     private string ContentColor = "#FFFFFF";
     private string TextColor = "#000000";
-
-    private void NavigateToLogin() => NavManager.NavigateTo("/login");
 }

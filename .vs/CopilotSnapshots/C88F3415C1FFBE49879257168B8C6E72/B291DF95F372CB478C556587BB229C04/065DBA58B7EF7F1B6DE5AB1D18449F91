@@ -98,6 +98,4 @@
     private string DrawerColor = "#F5F5F5";
     private string ContentColor = "#FFFFFF";
     private string TextColor = "#000000";
-
-    private void NavigateToLogin() => NavManager.NavigateTo("/login");
 }

@@ -11,8 +11,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Conta calorie.Client\Conta calorie.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.25" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.40.1" />
-    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.40.1" />
   </ItemGroup>
 
 </Project>

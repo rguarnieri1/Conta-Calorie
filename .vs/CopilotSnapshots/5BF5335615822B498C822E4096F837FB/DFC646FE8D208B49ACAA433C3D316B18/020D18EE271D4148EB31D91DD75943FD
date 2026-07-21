@@ -1,4 +1,4 @@
-@page "/login"
+﻿@page "/login"
 
 @using MudBlazor
 
@@ -59,8 +59,11 @@
 
     private void LoginWithFacebook()
     {
-        // Usa l'endpoint server /auth-start per avviare il flusso OAuth (gestisce state/nonce)
-        NavManager.NavigateTo("/auth-start?provider=facebook", true);
+        var fbClientId = Configuration["OAuth:FacebookClientId"] ?? string.Empty;
+        var redirect = Configuration["OAuth:RedirectUri"] ?? NavManager.Uri;
+        // Costruisce URL autorizzazione Facebook (server dovrà scambiare il code)
+        var url = $"https://www.facebook.com/v15.0/dialog/oauth?client_id={Uri.EscapeDataString(fbClientId)}&redirect_uri={Uri.EscapeDataString(redirect)}&response_type=code&scope=email,public_profile&state=provider:facebook";
+        NavManager.NavigateTo(url, true);
     }
 
     private void LoginWithGoogle()

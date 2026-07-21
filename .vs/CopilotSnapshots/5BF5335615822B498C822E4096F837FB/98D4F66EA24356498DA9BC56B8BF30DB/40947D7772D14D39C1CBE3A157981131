@@ -1,5 +1,6 @@
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+﻿using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
+using Microsoft.AspNetCore.Components.WebAssembly.Http;
 using System.Net.Http;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -15,8 +16,6 @@ if (!string.IsNullOrEmpty(oauthRedirect))
 }
 if (string.IsNullOrEmpty(serverBase)) serverBase = builder.HostEnvironment.BaseAddress;
 
-// Usa HttpClient base; per inviare cookie nelle chiamate cross-origin è necessario configurare il browser/fetch
-builder.Services.AddScoped(sp => new HttpClient() { BaseAddress = new Uri(serverBase) });
+builder.Services.AddScoped(sp => new HttpClient(new BrowserHttpHandler { FetchCredentials = FetchCredentials.Include }) { BaseAddress = new Uri(serverBase) });
 
 await builder.Build().RunAsync();
-

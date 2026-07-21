@@ -1,0 +1,125 @@
+﻿using Conta_calorie.Client.Pages;
+using Conta_calorie.Components;
+using MudBlazor.Services;
+using System.Text.Json;
+using System.Net.Http.Json;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveWebAssemblyComponents();
+builder.Services.AddMudServices();
+
+// HttpClient factory per chiamate verso provider OAuth
+builder.Services.AddHttpClient();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseWebAssemblyDebugging();
+}
+else
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+app.UseAntiforgery();
+// HttpClient factory per chiamate verso provider OAuth (registrata prima di Build)
+
+
+app.MapRazorComponents<App>()
+    .AddInteractiveWebAssemblyRenderMode()
+    .AddAdditionalAssemblies(typeof(Conta_calorie.Client._Imports).Assembly);
+
+// Endpoint callback OAuth (authorization code exchange)
+app.MapGet("/auth-callback", async (HttpContext http, IConfiguration config, IHttpClientFactory httpFactory) =>
+{
+    var query = http.Request.Query;
+    var code = query["code"].ToString();
+    var state = query["state"].ToString();
+
+    var oauthSection = config.GetSection("OAuth");
+    var redirectToClient = oauthSection["ClientRedirect"] ?? "https://localhost:5000/";
+
+    if (string.IsNullOrEmpty(code))
+    {
+        http.Response.Redirect(redirectToClient + "?auth=error");
+        return;
+    }
+
+    // Determine provider from state (expected format: provider:google or provider:facebook)
+    var provider = "";
+    if (!string.IsNullOrEmpty(state) && state.StartsWith("provider:"))
+        provider = state.Split(':')[1];
+
+    try
+    {
+        var client = httpFactory.CreateClient();
+
+        if (provider == "google")
+        {
+            // Exchange code for tokens
+            var tokenRequest = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string,string>("code", code),
+                new KeyValuePair<string,string>("client_id", oauthSection["GoogleClientId"]),
+                new KeyValuePair<string,string>("client_secret", oauthSection["GoogleClientSecret"]),
+                new KeyValuePair<string,string>("redirect_uri", oauthSection["RedirectUri"]),
+                new KeyValuePair<string,string>("grant_type", "authorization_code")
+            });
+
+            var tokenResp = await client.PostAsync("https://oauth2.googleapis.com/token", tokenRequest);
+            tokenResp.EnsureSuccessStatusCode();
+            var tokenJson = await tokenResp.Content.ReadFromJsonAsync<JsonElement>();
+            var accessToken = tokenJson.GetProperty("access_token").GetString();
+
+            // Get user info
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+            var userResp = await client.GetFromJsonAsync<JsonElement>("https://www.googleapis.com/oauth2/v2/userinfo");
+            var email = userResp.TryGetProperty("email", out var e) ? e.GetString() : string.Empty;
+            var name = userResp.TryGetProperty("name", out var n) ? n.GetString() : string.Empty;
+
+            var dest = $"{redirectToClient}?provider=google&email={Uri.EscapeDataString(email)}&name={Uri.EscapeDataString(name)}";
+            http.Response.Redirect(dest);
+            return;
+        }
+        else if (provider == "facebook")
+        {
+            // Exchange code for access token (Facebook uses GET)
+            var tokenUrl = $"https://graph.facebook.com/v15.0/oauth/access_token?client_id={Uri.EscapeDataString(oauthSection["FacebookClientId"])}&client_secret={Uri.EscapeDataString(oauthSection["FacebookClientSecret"])}&redirect_uri={Uri.EscapeDataString(oauthSection["RedirectUri"])}&code={Uri.EscapeDataString(code)}";
+            var tokenResp = await client.GetFromJsonAsync<JsonElement>(tokenUrl);
+            var accessToken = tokenResp.TryGetProperty("access_token", out var at) ? at.GetString() : string.Empty;
+
+            // Get user info
+            var userUrl = $"https://graph.facebook.com/me?fields=id,name,email&access_token={Uri.EscapeDataString(accessToken)}";
+            var userResp = await client.GetFromJsonAsync<JsonElement>(userUrl);
+            var email = userResp.TryGetProperty("email", out var e) ? e.GetString() : string.Empty;
+            var name = userResp.TryGetProperty("name", out var n) ? n.GetString() : string.Empty;
+
+            var dest = $"{redirectToClient}?provider=facebook&email={Uri.EscapeDataString(email)}&name={Uri.EscapeDataString(name)}";
+            http.Response.Redirect(dest);
+            return;
+        }
+        else
+        {
+            http.Response.Redirect(redirectToClient + "?auth=unknown_provider");
+            return;
+        }
+    }
+    catch (Exception ex)
+    {
+        // Log exception as needed
+        http.Response.Redirect(redirectToClient + "?auth=error");
+        return;
+    }
+});
+
+app.Run();

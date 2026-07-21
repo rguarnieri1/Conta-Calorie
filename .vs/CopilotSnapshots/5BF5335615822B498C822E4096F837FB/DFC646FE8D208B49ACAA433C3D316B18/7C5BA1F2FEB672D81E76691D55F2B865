@@ -1,4 +1,4 @@
-using Conta_calorie.Client.Pages;
+﻿using Conta_calorie.Client.Pages;
 using Conta_calorie.Components;
 using MudBlazor.Services;
 using System.Text.Json;
@@ -6,9 +6,6 @@ using System.Net.Http.Json;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.WebUtilities;
 using System.Text;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
-using System.Security.Claims;
 using Microsoft.IdentityModel.Protocols;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
@@ -18,31 +15,6 @@ using System.Threading;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// CORS: permetti al client (porta diversa) di chiamare API e inviare cookie
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowClient", policy =>
-    {
-        policy.WithOrigins(builder.Configuration["OAuth:ClientRedirect"] ?? "https://localhost:5000")
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials();
-    });
-});
-
-// Authentication: cookie per sessione server-side
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.Cookie.HttpOnly = true;
-        options.Cookie.SameSite = SameSiteMode.None; // necessario per cross-origin durante sviluppo
-        options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-        options.LoginPath = "/login";
-        options.ExpireTimeSpan = TimeSpan.FromHours(1);
-    });
-
-builder.Services.AddAuthorization();
-
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
 builder.Services.AddMudServices();
@@ -70,10 +42,6 @@ app.UseStaticFiles();
 app.UseAntiforgery();
 // HttpClient factory per chiamate verso provider OAuth (registrata prima di Build)
 
-app.UseCors("AllowClient");
-app.UseAuthentication();
-app.UseAuthorization();
-
 
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
@@ -83,12 +51,12 @@ app.MapRazorComponents<App>()
 app.MapGet("/auth-start", (HttpContext http, IConfiguration config) =>
 {
     var provider = http.Request.Query["provider"].ToString();
-    var oauthCfg = config.GetSection("OAuth");
-    var redirectToClientStart = oauthCfg["ClientRedirect"] ?? "https://localhost:5000/";
+    var oauthSection = config.GetSection("OAuth");
+    var redirectToClient = oauthSection["ClientRedirect"] ?? "https://localhost:5000/";
 
-        if (string.IsNullOrEmpty(provider))
+    if (string.IsNullOrEmpty(provider))
     {
-        http.Response.Redirect(redirectToClientStart + "?auth=error");
+        http.Response.Redirect(redirectToClient + "?auth=error");
         return Results.BadRequest();
     }
 
@@ -111,8 +79,8 @@ app.MapGet("/auth-start", (HttpContext http, IConfiguration config) =>
         var authEndpoint = "https://accounts.google.com/o/oauth2/v2/auth";
         var parameters = new Dictionary<string, string?>
         {
-            ["client_id"] = oauthCfg["GoogleClientId"],
-            ["redirect_uri"] = oauthCfg["RedirectUri"],
+            ["client_id"] = oauthSection["GoogleClientId"],
+            ["redirect_uri"] = oauthSection["RedirectUri"],
             ["response_type"] = "code",
             ["scope"] = "openid email profile",
             ["state"] = state,
@@ -129,8 +97,8 @@ app.MapGet("/auth-start", (HttpContext http, IConfiguration config) =>
         var authEndpoint = "https://www.facebook.com/v15.0/dialog/oauth";
         var parameters = new Dictionary<string, string?>
         {
-            ["client_id"] = oauthCfg["FacebookClientId"],
-            ["redirect_uri"] = oauthCfg["RedirectUri"],
+            ["client_id"] = oauthSection["FacebookClientId"],
+            ["redirect_uri"] = oauthSection["RedirectUri"],
             ["state"] = state,
             ["scope"] = "email"
         };
@@ -141,7 +109,7 @@ app.MapGet("/auth-start", (HttpContext http, IConfiguration config) =>
     }
     else
     {
-        http.Response.Redirect(redirectToClientStart + "?auth=unknown_provider");
+        http.Response.Redirect(redirectToClient + "?auth=unknown_provider");
         return Results.BadRequest();
     }
 });
@@ -157,8 +125,9 @@ app.MapGet("/auth-callback", async (HttpContext http, IConfiguration config, IHt
     var cookieState = http.Request.Cookies["oauth_state"];
     if (string.IsNullOrEmpty(state) || string.IsNullOrEmpty(cookieState) || cookieState != state)
     {
-        var redirectToClientInvalidLocal = config.GetSection("OAuth")["ClientRedirect"] ?? "https://localhost:5000/";
-        http.Response.Redirect(redirectToClientInvalidLocal + "?auth=invalid_state");
+        var oauthSection = config.GetSection("OAuth");
+        var redirectToClient = oauthSection["ClientRedirect"] ?? "https://localhost:5000/";
+        http.Response.Redirect(redirectToClient + "?auth=invalid_state");
         return;
     }
 
@@ -228,21 +197,6 @@ app.MapGet("/auth-callback", async (HttpContext http, IConfiguration config, IHt
                 var principal = handler.ValidateToken(idToken, validationParameters, out var validatedToken);
                 email = principal.FindFirst("email")?.Value ?? string.Empty;
                 name = principal.FindFirst("name")?.Value ?? string.Empty;
-
-                // Sign in the user with cookie authentication
-                var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, name ?? string.Empty),
-                    new Claim(ClaimTypes.Email, email ?? string.Empty),
-                    new Claim("provider", provider ?? string.Empty)
-                };
-                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                var userPrincipal = new ClaimsPrincipal(identity);
-                await http.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrincipal, new AuthenticationProperties
-                {
-                    IsPersistent = false,
-                    ExpiresUtc = DateTimeOffset.UtcNow.AddHours(1)
-                });
             }
             else if (!string.IsNullOrEmpty(accessToken))
             {
@@ -253,8 +207,7 @@ app.MapGet("/auth-callback", async (HttpContext http, IConfiguration config, IHt
                 name = userResp.TryGetProperty("name", out var n) ? n.GetString() : string.Empty;
             }
 
-            var dest = $"{redirectToClient}?provider=google&email={Uri.EscapeDataString(email)}" +
-                       $"&name={Uri.EscapeDataString(name)}";
+            var dest = $"{redirectToClient}?provider=google&email={Uri.EscapeDataString(email)}&name={Uri.EscapeDataString(name)}";
             http.Response.Redirect(dest);
             return;
         }
@@ -290,21 +243,6 @@ app.MapGet("/auth-callback", async (HttpContext http, IConfiguration config, IHt
             var name = userResp.TryGetProperty("name", out var n) ? n.GetString() : string.Empty;
 
             var dest = $"{redirectToClient}?provider=facebook&email={Uri.EscapeDataString(email)}&name={Uri.EscapeDataString(name)}";
-            // Sign in the user with cookie authentication for Facebook as well
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, name ?? string.Empty),
-                new Claim(ClaimTypes.Email, email ?? string.Empty),
-                new Claim("provider", provider ?? string.Empty)
-            };
-            var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-            var userPrincipal = new ClaimsPrincipal(identity);
-            await http.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrincipal, new AuthenticationProperties
-            {
-                IsPersistent = false,
-                ExpiresUtc = DateTimeOffset.UtcNow.AddHours(1)
-            });
-
             http.Response.Redirect(dest);
             return;
         }
@@ -321,14 +259,32 @@ app.MapGet("/auth-callback", async (HttpContext http, IConfiguration config, IHt
         return;
     }
 });
+            var tokenUrl = $"https://graph.facebook.com/v15.0/oauth/access_token?client_id={Uri.EscapeDataString(oauthSection["FacebookClientId"])}&client_secret={Uri.EscapeDataString(oauthSection["FacebookClientSecret"])}&redirect_uri={Uri.EscapeDataString(oauthSection["RedirectUri"])}&code={Uri.EscapeDataString(code)}";
+            var tokenResp = await client.GetFromJsonAsync<JsonElement>(tokenUrl);
+            var accessToken = tokenResp.TryGetProperty("access_token", out var at) ? at.GetString() : string.Empty;
 
-// API protetta di esempio che ritorna informazioni sull'utente autenticato
-app.MapGet("/api/user", (ClaimsPrincipal user) =>
-{
-    var name = user.Identity?.Name ?? string.Empty;
-    var email = user.FindFirst(ClaimTypes.Email)?.Value ?? string.Empty;
-    var provider = user.FindFirst("provider")?.Value ?? string.Empty;
-    return Results.Json(new { name, email, provider });
-}).RequireAuthorization();
+            // Get user info
+            var userUrl = $"https://graph.facebook.com/me?fields=id,name,email&access_token={Uri.EscapeDataString(accessToken)}";
+            var userResp = await client.GetFromJsonAsync<JsonElement>(userUrl);
+            var email = userResp.TryGetProperty("email", out var e) ? e.GetString() : string.Empty;
+            var name = userResp.TryGetProperty("name", out var n) ? n.GetString() : string.Empty;
+
+            var dest = $"{redirectToClient}?provider=facebook&email={Uri.EscapeDataString(email)}&name={Uri.EscapeDataString(name)}";
+            http.Response.Redirect(dest);
+            return;
+        }
+        else
+        {
+            http.Response.Redirect(redirectToClient + "?auth=unknown_provider");
+            return;
+        }
+    }
+    catch (Exception ex)
+    {
+        // Log exception as needed
+        http.Response.Redirect(redirectToClient + "?auth=error");
+        return;
+    }
+});
 
 app.Run();

@@ -1,4 +1,5 @@
-﻿@using System.Text.Json
+﻿@using MudBlazor
+@using System.Text.Json
 @inject IJSRuntime JS
 @inject NavigationManager NavManager
 @inherits LayoutComponentBase
@@ -9,17 +10,19 @@
     </div>
 
     <main>
-        <div class="top-row px-4" style="display:flex; justify-content:space-between; align-items:center;">
-            <div><a href="/">Home</a></div>
+        <div class="top-row px-4 d-flex justify-space-between align-center">
+            <div>
+                <a href="/">Home</a>
+            </div>
             <div>
                 @if (isLoggedIn)
                 {
-                    <span>@UserDisplay</span>
-                    <button @onclick="Logout" style="margin-left:8px;">Logout</button>
+                    <MudChip Color="Color.Primary" Variant="Variant.Filled" Class="mr-2">@UserDisplay</MudChip>
+                    <MudButton Variant="Variant.Text" Color="Color.Error" OnClick="Logout">Logout</MudButton>
                 }
                 else
                 {
-                    <button @onclick="NavigateToLogin">Login</button>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Primary" OnClick="(()=>NavManager.NavigateTo(""/login""))">Login</MudButton>
                 }
             </div>
         </div>
@@ -60,14 +63,21 @@
 
     private async Task Logout()
     {
-        try { await JS.InvokeVoidAsync("localStorage.removeItem", "auth_user"); } catch { }
+        try
+        {
+            await JS.InvokeVoidAsync("localStorage.removeItem", "auth_user");
+        }
+        catch { }
         isLoggedIn = false;
         UserDisplay = string.Empty;
         StateHasChanged();
         NavManager.NavigateTo("/");
     }
 
-    private class AuthUser { public string provider { get; set; } public string name { get; set; } public string email { get; set; } }
-
-    private void NavigateToLogin() => NavManager.NavigateTo("/login");
+    private class AuthUser
+    {
+        public string provider { get; set; }
+        public string name { get; set; }
+        public string email { get; set; }
+    }
 }
